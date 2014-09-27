@@ -1,0 +1,15 @@
+*.pdf
+*.ps
+*.aux
+*.log
+*.dvi
+*.toc
+_TZ_*.tex
+*~
+*.bak
+*.out
+*.thm
+*.fdb_latexmk
+*.fls
+*\#*
+*.synctex*
