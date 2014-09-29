@@ -121,3 +121,4 @@ _TZ_*.tex
 *.fdb_latexmk
 *.fls
 *\#*
+/auto/

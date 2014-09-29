@@ -17,7 +17,7 @@ clean:
 	rm -f $(SNAME).{bbl,aux,ps,thm}
 
 view: all
-	evince $(NAME).pdf
+	evince $(NAME).pdf &
 
 edit: emacs
 
