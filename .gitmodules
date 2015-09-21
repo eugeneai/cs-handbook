@@ -1,3 +1,6 @@
 [submodule "subook"]
 	path = subook
 	url = git@github.com:eugeneai/subook.git
+[submodule "materials"]
+	path = materials
+	url = git@bitbucket.org:eugeneai/cs-matherial.git
