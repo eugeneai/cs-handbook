@@ -3,17 +3,17 @@ NAME=cs
 # BIBROOT=$(PWD)/../..
 #	BIBINPUTS=$(BIBROOT) latexmk -pdfps -dvi- -ps- $(NAME)
 
-.PHONY: FORCE_MAKE clean view all emacs edit
+.PHONY: FORCE_MAKE clean view all emacs edit pics
 
 all: $(NAME).pdf
-#all: $(SNAME).pdf # If the cover is already issued 
+#all: $(SNAME).pdf # If the cover is already issued
 
 %.pdf: %.tex FORCE_MAKE
 	BIBINPUTS=$(BIBROOT) latexmk -pdf -e '$$pdflatex=q/lualatex --synctex=1 %O %S/' $(MNAME)
 
 clean:
 	BIBINPUTS=$(BIBROOT) latexmk -C
-	rm -f $(NAME).{bbl,aux,ps,thm,synctex.gz} 
+	rm -f $(NAME).{bbl,aux,ps,thm,synctex.gz}
 	rm -f $(SNAME).{bbl,aux,ps,thm}
 
 view: all
@@ -26,3 +26,5 @@ emacs:
 
 $(SNAME).pdf: $(NAME).pdf cover.jpg
 	pdfjoin -o $(NAME).pdf -- $(SNAME).pdf cover.jpg
+
+pics:
